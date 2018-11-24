@@ -72,3 +72,17 @@ if (document.documentElement.clientWidth < 900) {
 @media all and (max-width: 900px) {
 	// styles css
 }
+
+
+
+//////////////////////////////////////////////////////
+// 007
+// স্ক্রলিং করলে জেকুয়েরী দিয়ে ক্লাস এড করার ফাংশন।
+  $(document).on('scroll', function (e) {
+    var scrollPos = $(this).scrollTop();
+    if (scrollPos > 100) {
+      $('#navbar2').addClass('sticky');
+    } else {
+      $('#navbar2').removeClass('sticky');
+    }
+  });
